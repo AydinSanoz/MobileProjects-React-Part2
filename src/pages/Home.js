@@ -1,11 +1,20 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {SafeAreaView, View, Text, Button} from 'react-native';
+import {HomeStyles} from '../Styles'
 
-const Home = () => {
+const Home = (props) => {
+    console.log("Home -> props", props)
     return(
-        <View>
-            <Text>Home Page</Text>
-        </View>
+        <SafeAreaView style = {HomeStyles.Container}>
+            <View>
+                <Text style = {HomeStyles.Text}>Home Page</Text>
+            </View>
+                <Button
+                    title = 'Go'
+                     style = {HomeStyles.Button}
+                    onPress = {()=>{props.navigation.navigate('Reviews')}}
+                />
+        </SafeAreaView>
     )
 }
 

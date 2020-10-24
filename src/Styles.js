@@ -11,13 +11,33 @@ const RouterStyles = StyleSheet.create({
 export { RouterStyles };
 
 const HomeStyles = StyleSheet.create({
+    Container:{
+        flex:1,
+        justifyContent : 'center',
+        alignItems :'center'
+    },
     Text:{
-        fontSize : 30,
+        fontSize : 40,
     },
     
 });
 
 export {HomeStyles};
+
+const ReviewsStyles = StyleSheet.create({
+    Container:{
+        flex:1,
+        justifyContent : 'center',
+        alignItems :'center'
+    },
+    Text:{
+        fontSize : 40,
+    },
+    
+});
+
+export {ReviewsStyles};
+
 
 
 
