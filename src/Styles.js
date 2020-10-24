@@ -38,6 +38,36 @@ const ReviewsStyles = StyleSheet.create({
 
 export {ReviewsStyles};
 
+const RelativesStyles = StyleSheet.create({
+    Container:{
+        flex:1,
+        justifyContent : 'center',
+        alignItems :'center'
+    },
+    Text:{
+        fontSize : 40,
+    },
+    
+});
+
+export {RelativesStyles};
+
+const FriendsStyles = StyleSheet.create({
+    Container:{
+        flex:1,
+        justifyContent : 'center',
+        alignItems :'center'
+    },
+    Text:{
+        fontSize : 40,
+    },
+    
+});
+
+export {FriendsStyles};
+
+
+
 
 
 
