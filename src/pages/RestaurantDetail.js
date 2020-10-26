@@ -6,6 +6,9 @@ import {
   StyleSheet,
   Dimensions,
   Image,
+  KeyboardAvoidingView,
+  Button,
+  Linking,
 } from 'react-native';
 
 {
@@ -31,24 +34,42 @@ const RestaurantDetail = (props) => {
   console.log('RestaurantDetail -> selectedRestaurant', selectedRestaurant);
 
   return (
-    <SafeAreaView style={{flex: 1}}>
-      <View>
-        <Image
-          style={styles.image}
-          source={{uri: selectedRestaurant.image_url}}
-        />
+    <SafeAreaView>
+      <KeyboardAvoidingView>
         <View>
-          <Text style={styles.header}>
-            {selectedRestaurant.name} Restaurant
-          </Text>
-        </View>
-        <View style={styles.container}>
           <Image
-            style={styles.icon}
-            source={require('../Assets/images-1.png')}
+            style={styles.image}
+            source={{uri: selectedRestaurant.image_url}}
+          />
+          <View>
+            <Text style={styles.header}>
+              {selectedRestaurant.name} Restaurant
+            </Text>
+          </View>
+          <View style={styles.container}>
+            <Image
+              style={[styles.icon, {marginHorizontal: -385}]}
+              source={require('../Assets/location.png')}
+            />
+            <Text style={styles.text}>{selectedRestaurant.area}</Text>
+          </View>
+          <View style={styles.container}>
+            <Image style={styles.icon} source={require('../Assets/home.png')} />
+            <Text style={styles.text}>{selectedRestaurant.address}</Text>
+          </View>
+          <View style={styles.container}>
+            <Image
+              style={[styles.icon, {marginHorizontal: -378}]}
+              source={require('../Assets/phone.jpg')}
+            />
+            <Text style={styles.text}>{selectedRestaurant.phone}</Text>
+          </View>
+          <Button 
+            title = 'Rezervasyon Yaptır'
+            onPress = {()=> Linking.openURL(selectedRestaurant.mobile_reserve_url)}
           />
         </View>
-      </View>
+      </KeyboardAvoidingView>
     </SafeAreaView>
   );
 };
@@ -68,16 +89,18 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   container: {
-      flexDirection:'row',
-      alignItems: 'flex-start',
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
     backgroundColor: '#2196f3',
-    margin: 5,
+    margin: 10,
     padding: 8,
     borderRadius: 10,
   },
   icon: {
     resizeMode: 'contain',
-    height: Dimensions.get('window').height * 0.1,
+    height: Dimensions.get('window').height * 0.04,
+    marginHorizontal: -80,
   },
   text: {
     fontSize: 20,
