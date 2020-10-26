@@ -1,5 +1,3 @@
-/* eslint-disable no-trailing-spaces */
-/* eslint-disable prettier/prettier */
 import React, {useState, useEffect} from 'react';
 import {SafeAreaView, View, Text, FlatList, StyleSheet} from 'react-native';
 import CityCard from '../Components/CityCard';
@@ -28,7 +26,7 @@ const Cities = (props) => {
       <CityCard
         cityName={item}
         cityPress={() =>
-          props.navigation.navigate('RestaurantList', {selectedCity: item})
+          props.navigation.navigate('Restaurants', {selectedCity: item})
         }
       />
     );

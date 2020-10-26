@@ -3,7 +3,7 @@ import {SafeAreaView, View, Text} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import {Cities} from './Pages';
+import {Cities, Restaurants} from './Pages';
 
 function HomeScreen() {
   return (
@@ -19,7 +19,8 @@ function Router() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={Cities} options = {{headerShown: false}} />
+        <Stack.Screen name="Cities" component={Cities} options = {{headerShown: true}} />
+        <Stack.Screen name="Restaurants" component={Restaurants} options = {{headerShown: true}} />
       </Stack.Navigator>
     </NavigationContainer>
   );
