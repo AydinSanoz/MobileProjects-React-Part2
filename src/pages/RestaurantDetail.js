@@ -34,8 +34,8 @@ const RestaurantDetail = (props) => {
   console.log('RestaurantDetail -> selectedRestaurant', selectedRestaurant);
 
   return (
-    <SafeAreaView>
-      <KeyboardAvoidingView>
+    <SafeAreaView style = {{flex:1}}>
+      <View style={{flex: 1, alignItems: 'stretch'}}>
         <View>
           <Image
             style={styles.image}
@@ -64,12 +64,17 @@ const RestaurantDetail = (props) => {
             />
             <Text style={styles.text}>{selectedRestaurant.phone}</Text>
           </View>
-          <Button 
-            title = 'Rezervasyon Yaptır'
-            onPress = {()=> Linking.openURL(selectedRestaurant.mobile_reserve_url)}
+        </View>
+        <View style={{flex: 1, justifyContent: 'flex-end'}}>
+          <Button
+            style={{flex: 1,}}
+            title="Rezervasyon Yaptır"
+            onPress={() =>
+              Linking.openURL(selectedRestaurant.mobile_reserve_url)
+            }
           />
         </View>
-      </KeyboardAvoidingView>
+      </View>
     </SafeAreaView>
   );
 };
@@ -78,7 +83,7 @@ export {RestaurantDetail};
 
 const styles = StyleSheet.create({
   image: {
-    height: Dimensions.get('window').height / 3,
+    height: Dimensions.get('window').height / 4,
     margin: 5,
     padding: 8,
   },
