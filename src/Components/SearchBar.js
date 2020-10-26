@@ -7,6 +7,7 @@ const SearchBar = (props) => {
         <View>
             <TextInput
                 style= {styles.inputContainer}
+                placeholder = {props.placeholder}
                 onChangeText = {(val)=>{props.onSearch(val)}}
             />
         </View>
@@ -14,7 +15,7 @@ const SearchBar = (props) => {
   
 };
 
-export default SearchBar;
+export {SearchBar};
 
 const styles = StyleSheet.create({
   inputContainer: {

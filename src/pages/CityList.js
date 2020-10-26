@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {SafeAreaView, View, Text, FlatList, StyleSheet} from 'react-native';
-import CityCard from '../Components/CityCard';
-import SearchBar from '../Components/SearchBar';
+import {CityCard, SearchBar} from '../Components';
 import axios from 'axios';
 
 let originalCityList = []
@@ -25,8 +24,8 @@ const Cities = (props) => {
     return (
       <CityCard
         cityName={item}
-        cityPress={() =>
-          props.navigation.navigate('Restaurants', {selectedCity: item})
+        onPress={() =>
+          props.navigation.navigate('Restaurants',{selectedCity : item})
         }
       />
     );
@@ -50,14 +49,13 @@ const Cities = (props) => {
 
   return (
     <SafeAreaView>
-      <Text style={styles.cityHeader}>Cities</Text>
+      <Text style = {styles.header}>Bir Şehir Seçiniz</Text>
       <SearchBar
+        placeholder = 'Search a city ...'
         onSearch={(val) => {
           onSearchCity(val);
         }}
       />
-      <CityCard />
-
       <FlatList
         keyExtractor={(_, index) => index.toString()}
         data={cityList}
@@ -71,7 +69,7 @@ const Cities = (props) => {
 export {Cities};
 
 const styles = StyleSheet.create({
-  cityHeader: {
+  header: {
     fontSize: 30,
     fontWeight: 'bold',
   },

@@ -5,8 +5,7 @@ const CityCard = (props) => {
   return (
     <View>
       <TouchableOpacity style={styles.container}
-        onPress= {(item)=> props.cityPress(item)}
-      
+        onPress= {(item)=> props.onPress(item)}
       >
         <Text style={styles.cities}>{props.cityName}</Text>
       </TouchableOpacity>
@@ -14,7 +13,7 @@ const CityCard = (props) => {
   );
 };
 
-export default CityCard;
+export { CityCard };
 
 const styles = StyleSheet.create({
   container: {
