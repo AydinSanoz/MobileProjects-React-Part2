@@ -18,10 +18,7 @@ function Router(){
     
     return (
         <NavigationContainer>
-          <Tab.Navigator 
-            initialRouteName = "Home"
-            
-          >
+          <Tab.Navigator initialRouteName = "Home" >
             <Tab.Screen name="Home" component={Home}/>
             <Tab.Screen name="Reviews" component={Reviews} />
           </Tab.Navigator>
