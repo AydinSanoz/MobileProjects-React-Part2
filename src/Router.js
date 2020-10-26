@@ -2,30 +2,27 @@ import React from 'react';
 import {SafeAreaView, View, Text} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
+import {Cities} from './Pages';
 
-import {Home, Reviews} from './pages'
+function HomeScreen() {
+  return (
+    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+      <Text>Home Screen</Text>
+    </View>
+  );
+}
 
+const Stack = createStackNavigator();
 
-
-
-
-
-const Tab = createBottomTabNavigator();
-
-function Router(){
-    
-    return (
-        <NavigationContainer>
-          <Tab.Navigator initialRouteName = "Home" >
-            <Tab.Screen name="Home" component={Home}/>
-            <Tab.Screen name="Reviews" component={Reviews} />
-          </Tab.Navigator>
-        </NavigationContainer>
-    );
-        
-
+function Router() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Cities} options = {{headerShown: false}} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 }
 
 export default Router;
