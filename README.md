@@ -12,7 +12,7 @@ lifecycle-redux-navigation ...
         <th>Project0015
     </tr>
     <tr>
-        <td> <img src = './src/Assets/CityYelp.gif'>
+        <td> <img src = './src/Assets/CityYelpLast.gif'>
         <td>
         ```
 
