@@ -28,6 +28,16 @@ import {
 }
 
 const RestaurantCard = (props) => {
+  function reviewStars(num) {
+    let stars = [];
+    for(let i= 0; i < num; i++) {
+      stars.push('🌟');
+    }
+    return (
+      <Text>{stars}</Text>
+    );
+  };
+
   return (
     <View style={styles.container}>
       <TouchableOpacity
@@ -37,7 +47,12 @@ const RestaurantCard = (props) => {
           style={styles.image}
           source={{uri: props.Restaurant.image_url}}
         />
-        <Text style={styles.text}>{props.Restaurant.name}</Text>
+        <View style = {{flexDirection:'row',justifyContent: 'space-between',alignItems:'center'}}>
+          <Text style={styles.text}>{props.Restaurant.name}</Text>
+          <Text>{reviewStars(props.Restaurant.price)}</Text>
+            
+        </View>
+
       </TouchableOpacity>
     </View>
   );

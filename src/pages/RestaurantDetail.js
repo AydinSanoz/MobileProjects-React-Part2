@@ -47,21 +47,15 @@ const RestaurantDetail = (props) => {
             </Text>
           </View>
           <View style={styles.container}>
-            <Image
-              style={[styles.icon, {marginHorizontal: -385}]}
-              source={require('../Assets/location.png')}
-            />
+            <Text style = {{fontSize :40}}>🍲 </Text>
             <Text style={styles.text}>{selectedRestaurant.area}</Text>
           </View>
           <View style={styles.container}>
-            <Image style={styles.icon} source={require('../Assets/home.png')} />
+            <Text style = {{fontSize :40}}>🏠 </Text> 
             <Text style={styles.text}>{selectedRestaurant.address}</Text>
           </View>
           <View style={styles.container}>
-            <Image
-              style={[styles.icon, {marginHorizontal: -378}]}
-              source={require('../Assets/phone.jpg')}
-            />
+            <Text style = {{fontSize :40}}>☎ </Text>
             <Text style={styles.text}>{selectedRestaurant.phone}</Text>
           </View>
         </View>
