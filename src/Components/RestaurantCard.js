@@ -8,6 +8,8 @@ import {
   Dimensions,
   ImageBackground,
 } from 'react-native';
+import ImageData from '../imangesFromBahar/restaurant_name.json'
+console.log("ImageData", ImageData)
 
 {
   // "address": "1 North New York Road"
@@ -26,6 +28,8 @@ import {
   // "reserve_url": "http://www.opentable.com/single.aspx?rid=17191"
   // "state": "NJ"
 }
+
+
 
 const RestaurantCard = (props) => {
   function reviewStars(num) {
