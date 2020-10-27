@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {SafeAreaView, View, Text, FlatList, StyleSheet} from 'react-native';
+import {SafeAreaView, View, Text, FlatList, StyleSheet, ActivityIndicator} from 'react-native';
 import {CityCard, SearchBar} from '../Components';
 import axios from 'axios';
 
@@ -7,6 +7,7 @@ let originalCityList = []
 
 const Cities = (props) => {
   const [cityList, setCityList] = useState([]);
+  const [isLoading, setIsLoading] = useState(true)
 
   const fetchCityData = async () => {
     const {data} = await axios.get(
@@ -14,6 +15,7 @@ const Cities = (props) => {
     );
     originalCityList = [...data.cities]
     setCityList(data.cities);
+    setIsLoading(false)
   };
 
   useEffect(() => {
@@ -56,12 +58,15 @@ const Cities = (props) => {
           onSearchCity(val);
         }}
       />
+      {isLoading ?
+      <ActivityIndicator size = 'large'/>
+      :
       <FlatList
         keyExtractor={(_, index) => index.toString()}
         data={cityList}
         renderItem={renderCities}
         ItemSeparatorComponent={renderSeperator}
-      />
+      />}
     </SafeAreaView>
   );
 };
