@@ -8,14 +8,15 @@ import {reducer, initialState} from './context';
 const store = createStore(reducer, initialState);
 
 const Main = (props) => {
+console.log("Main -> props", props)
 
-
+  
   return (
     <Provider store = {store}>
       <SafeAreaView style={{flex: 1}}>
-        <Text> Main Page</Text>
+        <Text>{}</Text>
         <ComponentA />
-        <ComponentB />
+        <ComponentB  title = 'PushMe'/>
       </SafeAreaView>
     </Provider>
   );
