@@ -1,17 +1,16 @@
 import React from 'react';
-import {View, Text, Button} from 'react-native';
+import { Text, View } from 'react-native';
+import {useSelector, useDispatch} from 'react-redux';
 
 
+const ComponentA = () =>{
+    
+    const myCounter = useSelector(state => state.counter)
+    return(
+        <View style= {{flex:1,alignItems: 'center'}}>
+            <Text style = {{ fontSize: 40}}>{myCounter}</Text>
+        </View>
+    )
+}
 
-const ComponentA = (props) => {
-  return (
-    <View style={{flex: 1}}>
-      <Text>ComponentA</Text>
-      <Button title = "Arttır"/>
-      <Button title = "Azalt" />
-      <Text>state</Text>
-    </View>
-  );
-};
-
-export {ComponentA};
+export {ComponentA} ;

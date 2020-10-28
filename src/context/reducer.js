@@ -3,14 +3,12 @@ function reducer(state, action) {
     case 'INCREASE':
       state.counter = state.counter + 1;
       return {...state};
-
     case 'DECREASE':
       state.counter = state.counter - 1;
       return {...state};
-
     default:
       return state;
   }
 }
 
-export {reducer};
+export {reducer} ;
