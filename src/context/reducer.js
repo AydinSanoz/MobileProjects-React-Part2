@@ -6,6 +6,9 @@ function reducer(state, action) {
     case 'DECREASE':
       state.counter = state.counter - 1;
       return {...state};
+    case "SETUSERNAME":
+        state.userName = action.payload.newUserName
+        return {...state}
     default:
       return state;
   }
