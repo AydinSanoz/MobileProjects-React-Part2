@@ -44,11 +44,8 @@ Purpose of the this portfolio building will include my React Native Projects
     </tr>
     <tr>
         <td> <img src = './src(cityYelp)/Assets/CityYelpLast.gif'>
-         
-        ```
-        Coming soon
-        ```  
-          
+        <td> ```Coming Soon```
+        <td> ```Coming Soon```   
     </tr>
 </Table>
     
