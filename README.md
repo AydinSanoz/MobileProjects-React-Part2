@@ -50,6 +50,7 @@ Purpose of the this portfolio building will include my React Native Projects
         ```  
           
     </tr>
+</Table>
     
         
 
