@@ -1,9 +1,24 @@
 # MobileProjects-React-Part2
+
 lifecycle-redux-navigation ...
 
+- Part 6 - React Navigation
+- - NavigationContainer 
+- - createStackNavigator
+- - Stack.Navigator
+- - Stack.Screen
 
+- Part 7 - Other Elements/API
+- - Image
+- - Animated
+- - ActivityIndicator 
+- - StatusBar  
+- - Switch 
+- - ImageBackground
 
+- Part 8 - React Redux
 
+## ScreenShots
 
 <Table border>
     <tr>
