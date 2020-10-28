@@ -1,15 +1,22 @@
 import React from 'react';
-import {SafeAreaView, Text, View} from 'react-native';
-import { ComponentA, ComponentB } from './pages';
+import {SafeAreaView} from 'react-native';
+import {createStore} from 'redux';
+import {Provider} from 'react-redux';
 
+import {ComponentA, ComponentB} from './pages';
 
+import {reducer, initialState} from './context';
 
-const Main = () => {
+const store = createStore(reducer, initialState);
+
+const Main = (props) => {
   return (
-    <SafeAreaView style = {{flex:1}}>
+    <Provider store = {store}>
+      <SafeAreaView style={{flex: 1}}>
         <ComponentA />
         <ComponentB />
-    </SafeAreaView>
+      </SafeAreaView>
+    </Provider>
   );
 };
 
