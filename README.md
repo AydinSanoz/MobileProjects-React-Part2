@@ -44,12 +44,14 @@ Purpose of the this portfolio building will include my React Native Projects
     </tr>
     <tr>
         <td> <img src = './src(cityYelp)/Assets/CityYelpLast.gif'>
-        <td>
+         
         ```
-
         Coming soon
-
-
+        ```  
+          
+    </tr>
+    
+        
 
 ### The easiest way to convert your screenrecording to gif.
 
