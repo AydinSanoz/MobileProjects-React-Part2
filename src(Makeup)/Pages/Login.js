@@ -12,7 +12,7 @@ import axios from 'axios';
 
 import {MyBanner} from '../components';
 
-const Login = () => {
+const Login = (props) => {
   const [Products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -63,7 +63,9 @@ const Login = () => {
         </View>
         <View
           style={styles.buttonContainer}>
-          <Button color="#CDC1B4" title="Login" />
+          <Button color="#CDC1B4" title="Login" 
+              onPress = {()=> props.navigation.navigate('LoginPage')}
+          />
         </View>
       </View>
     </SafeAreaView>
