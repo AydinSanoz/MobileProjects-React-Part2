@@ -3,7 +3,8 @@ import { SafeAreaView, Text, View } from 'react-native' ;
 import { NavigationContainer, StackRouter } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import {Home} from './Pages';
+
+import {Home, Login} from './Pages';
 
 
 const Stack = createStackNavigator();  
@@ -14,6 +15,7 @@ const Makeup = () => {
         <NavigationContainer>
             <Stack.Navigator screenOptions= {{headerShown : false}}>
                 <Stack.Screen name = "Home" component= {Home}/>
+                <Stack.Screen name = "Login" component= {Login}/>
             </Stack.Navigator>
         </NavigationContainer>
     )
