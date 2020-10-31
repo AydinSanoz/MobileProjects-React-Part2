@@ -7,18 +7,10 @@ const MyButton = (props) => {
             onPress = {props.onPress}
         
         >
-            <Text style = {[styles.text, {color : props.color, fontSize : props.fontSize}]}> {props.title}</Text>
+            <Text style = {{textDecorationLine: 'underline' , color : props.color, fontSize : props.fontSize}}> {props.title}</Text>
         </TouchableOpacity>
     )
 }
 
 export {MyButton};
 
-const styles = StyleSheet.create({
-    text:{
-        fontSize: 30,
-        textDecorationLine :'underline',
-
-
-    }
-})

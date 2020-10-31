@@ -18,7 +18,11 @@ const Home = (props) => {
         <Text style={{fontSize: 60, fontWeight: 'bold'}}>
           Love Yourself Better
         </Text>
-        <MyButton title = 'Go Shopping' onPress = {()=> props.navigation.navigate('Login')}/>
+        <MyButton 
+        title = 'Go Shopping' 
+        onPress = {()=> props.navigation.navigate('Login')}
+        fontSize = {40}
+        />
 
         <Image
           style={styles.image}

@@ -58,7 +58,7 @@ const Login = (props) => {
             <MyButton 
               title = 'Sign Up Free Account'
               color = '#CDC1B4'
-              fontSize = {25}
+              fontSize = {20}
             />
           </View>
         <View style={styles.buttonContainer}>
