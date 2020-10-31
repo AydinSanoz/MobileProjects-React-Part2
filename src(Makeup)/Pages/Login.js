@@ -52,19 +52,21 @@ const Login = (props) => {
           <Text style={[styles.text, styles.desc]}>
             Discover products easily by swipping from one brand to another{' '}
           </Text>
-          <Text
-            style={[
-              styles.text,
-              styles.desc,
-              {textDecorationLine: 'underline'},
-            ]}>
-            Sign Up Free Account
-          </Text>
+          
         </View>
-        <View
-          style={styles.buttonContainer}>
-          <Button color="#CDC1B4" title="Login" 
-              onPress = {()=> props.navigation.navigate('LoginPage')}
+        <View style={[styles.buttonContainer, {justifyContent : 'center', alignItems :'flex-start', marginLeft:10}]}>
+            <Button 
+              title="Sign Up Free Account" 
+              color="#CDC1B4" 
+              
+
+            />
+          </View>
+        <View style={styles.buttonContainer}>
+          <Button
+            color="#CDC1B4"
+            title="Login"
+            onPress={() => props.navigation.navigate('LoginPage')}
           />
         </View>
       </View>
@@ -91,7 +93,7 @@ const styles = StyleSheet.create({
     textShadowRadius: 30,
   },
   buttonContainer: {
-      flex:1,
-      justifyContent : 'flex-end'
+    flex: 1,
+    justifyContent: 'flex-end',
   },
 });
