@@ -7,7 +7,7 @@ const MyButton = (props) => {
             onPress = {props.onPress}
         
         >
-            <Text style = {styles.text}> {props.title}</Text>
+            <Text style = {[styles.text, {color : props.color, fontSize : props.fontSize}]}> {props.title}</Text>
         </TouchableOpacity>
     )
 }

@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import axios from 'axios';
 
-import {MyBanner} from '../components';
+import {MyBanner, MyButton} from '../components';
 
 const Login = (props) => {
   const [Products, setProducts] = useState([]);
@@ -55,11 +55,10 @@ const Login = (props) => {
           
         </View>
         <View style={[styles.buttonContainer, {justifyContent : 'center', alignItems :'flex-start', marginLeft:10}]}>
-            <Button 
-              title="Sign Up Free Account" 
-              color="#CDC1B4" 
-              
-
+            <MyButton 
+              title = 'Sign Up Free Account'
+              color = '#CDC1B4'
+              fontSize = {25}
             />
           </View>
         <View style={styles.buttonContainer}>
