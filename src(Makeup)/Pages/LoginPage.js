@@ -1,6 +1,8 @@
 import React from 'react';
 import {SafeAreaView, View, Text, StyleSheet} from 'react-native';
 import auth from '@react-native-firebase/auth';
+import {AppleButton} from '@invertase/react-native-apple-authentication';
+
 import {MyInput, MyButton} from '../components';
 
 const LoginPage = (props) => {
@@ -21,8 +23,6 @@ const LoginPage = (props) => {
         alert(error.code);
       });
   };
-
-  
 
   return (
     <SafeAreaView style={{flex: 1, justifyContent: 'flex-start'}}>
@@ -53,6 +53,7 @@ const LoginPage = (props) => {
 
         <View style={styles.buttonContainer}>
           <MyButton
+            backColor = {props.route.params.login == 'Login' ? '#000a12' : 'gray'}
             color="white"
             textAlign="center"
             title={props.route.params.login}
@@ -60,6 +61,7 @@ const LoginPage = (props) => {
             onPress={logIn}
           />
         </View>
+       
       </View>
     </SafeAreaView>
   );
@@ -74,7 +76,6 @@ const styles = StyleSheet.create({
     borderBottomWidth: 2,
   },
   buttonContainer: {
-    backgroundColor: '#000a12',
     margin: 10,
     padding: 1,
   },

@@ -3,13 +3,12 @@ import {TouchableOpacity, Text, StyleSheet, View} from 'react-native';
 
 const MyButton = (props) => {
   return (
-    <View style={styles.myButton} >
+    <View style={[styles.myButton, {backgroundColor: props.backColor}]} >
       <TouchableOpacity onPress={props.onPress}>
         <Text
           style={[styles.text,
           {
             color: props.color,
-            backgroundColor: props.backColor,
             fontSize: props.fontSize,
             textAlign: props.textAlign,
             textDecorationLine : props.underline
