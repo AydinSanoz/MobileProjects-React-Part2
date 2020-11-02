@@ -15,6 +15,7 @@ const MyInput = (props) => {
                 keyboardType = {props.type}
                 secureTextEntry = {props.password}
                 placeholder = {props.placeholder}
+                onChangeText = {props.onText}
             />
         </View>
     )
