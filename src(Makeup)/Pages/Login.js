@@ -60,13 +60,14 @@ const Login = (props) => {
               color = '#CDC1B4'
               fontSize = {20}
               underline = 'underline'
+              onPress = {() => props.navigation.navigate('LoginPage',{login : 'SignUp'})}
             />
           </View>
         <View style={styles.buttonContainer}>
           <Button
             color="#CDC1B4"
             title="Login"
-            onPress={() => props.navigation.navigate('LoginPage')}
+            onPress={() => props.navigation.navigate('LoginPage', {login : 'Login'})}
           />
         </View>
       </View>

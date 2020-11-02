@@ -4,7 +4,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
-import {Home, Login, LoginPage, Brand, Category, Favorites} from './Pages';
+import {Home, Login, LoginPage, Brand, Category, Favorites, SignUp} from './Pages';
 
 const Tab = createBottomTabNavigator();
 
@@ -12,8 +12,8 @@ function BottomTab() {
   return (
     <Tab.Navigator>
       <Tab.Screen name="Brand" component={Brand} />
-      <Tab.Screen name="Category" component={Category} />
       <Tab.Screen name="Favorites" component={Favorites} />
+      <Tab.Screen name="Category" component={Category} />
     </Tab.Navigator>
   );
 }
@@ -26,6 +26,7 @@ const Makeup = () => {
       <Stack.Navigator screenOptions={{headerShown: false}}>
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="SignUp" component={SignUp} />
         <Stack.Screen name="LoginPage" component={LoginPage} />
         <Stack.Screen name="BottomTab" component={BottomTab} />
       </Stack.Navigator>

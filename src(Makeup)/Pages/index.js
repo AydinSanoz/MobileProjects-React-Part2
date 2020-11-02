@@ -4,3 +4,4 @@ export * from './LoginPage';
 export * from './Brand';
 export * from './Category';
 export * from './Favorites';
+export * from './SignupPage';

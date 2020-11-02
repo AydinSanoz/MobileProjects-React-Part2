@@ -5,28 +5,31 @@ import {MyInput, MyButton} from '../components';
 
 const LoginPage = (props) => {
   const [email, setEmail] = React.useState('');
+  const [name, setName] = React.useState('');
+  const [surname, setSurname] = React.useState('');
   const [password, setPassword] = React.useState('');
 
   const logIn = () => {
     auth()
-      .signInWithEmailAndPassword(
-        email,
-        password,
-      )
+      .signInWithEmailAndPassword(email, password)
       .then((response) => {
-        props.navigation.navigate('BottomTab')
+        props.navigation.navigate('BottomTab');
         console.log(response);
       })
       .catch((error) => {
-        console.log(error.code)
-        alert(error.code)
+        console.log(error.code);
+        alert(error.code);
       });
   };
+
+  
 
   return (
     <SafeAreaView style={{flex: 1, justifyContent: 'flex-start'}}>
       <View style={{flex: 1}}>
-        <Text style={{fontSize: 30, textAlign: 'center'}}>Login</Text>
+        <Text style={{fontSize: 30, textAlign: 'center'}}>
+          {props.route.params.login}
+        </Text>
 
         <MyInput
           placeholder="Enter Email..."
@@ -42,14 +45,17 @@ const LoginPage = (props) => {
             password
             onText={(pass) => setPassword(pass)}
           />
-          <MyButton underline="none" title="Forgot ?" />
+
+          {props.route.params.login == 'Login' && (
+            <MyButton underline="none" title="Forgot ?" />
+          )}
         </View>
 
         <View style={styles.buttonContainer}>
           <MyButton
             color="white"
             textAlign="center"
-            title="Log in"
+            title={props.route.params.login}
             fontSize={20}
             onPress={logIn}
           />
