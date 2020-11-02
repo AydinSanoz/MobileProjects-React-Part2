@@ -59,6 +59,7 @@ const Login = (props) => {
               title = 'Sign Up Free Account'
               color = '#CDC1B4'
               fontSize = {20}
+              underline = 'underline'
             />
           </View>
         <View style={styles.buttonContainer}>
