@@ -19,7 +19,8 @@ const Home = (props) => {
           Love Yourself Better
         </Text>
         <MyButton 
-        title = 'Go Shopping' 
+        title = 'Go Shopping'
+        underline = 'underline'
         onPress = {()=> props.navigation.navigate('Login')}
         fontSize = {40}
         />
