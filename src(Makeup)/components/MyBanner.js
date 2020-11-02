@@ -40,7 +40,7 @@ const MyBanner = (props) => {
           source={{uri: props.item.item.image_link}}
         />
       </View>
-      <View style>
+      <View style= {{backgroundColor : '#42424280'}}>
         <Text style = {styles.text}>{props.item.item.product_type}</Text>
       </View>
     </View>
@@ -69,6 +69,8 @@ const styles = StyleSheet.create({
     padding:8,
     alignSelf: 'center',
     fontSize : 25,
-    fontWeight : '400',
+    fontWeight : 'bold',
+    color : '#beb4ab',
+
   }
 });
