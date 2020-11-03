@@ -10,6 +10,7 @@ const LoginPage = (props) => {
   const [password, setPassword] = React.useState('');
 
   const LogIn = () => {
+    props.navigation.navigate('BottomTab')
     auth()
       .signInWithEmailAndPassword(email, password)
       .then((response) => {
