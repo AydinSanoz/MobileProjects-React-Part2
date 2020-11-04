@@ -35,19 +35,6 @@ Purpose of the this portfolio building will include my React Native Projects
 - Part 8 - React Redux
 
 ##  React-Native Projects
-
-<Table border>
-    <tr>
-        <th>Project0013
-        <th>Project0014
-        <th>Project0015
-    </tr>
-    <tr>
-        <td> <img src = './src(cityYelp)/Assets/CityYelpLast.gif'>
-        <td> `Coming Soon`
-        <td> `Coming Soon`   
-    </tr>
-</Table>
     
   <img src = './src(cityYelp)/Assets/CityYelpLast.gif'> |<img src = './src(cityYelp)/Assets/CityYelpLast.gif'> |<img src = './src(cityYelp)/Assets/CityYelpLast.gif'> |
   ---|---|---
