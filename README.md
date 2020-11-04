@@ -36,6 +36,7 @@ Purpose of the this portfolio building will include my React Native Projects
 
 ##  React-Native Projects
   Project 0012|Project 0013|Project 0014
+  ---|---|---
   <img src = './src(cityYelp)/Assets/CityYelpLast.gif'> |<img src = './src(cityYelp)/Assets/CityYelpLast.gif'> |<img src = './src(cityYelp)/Assets/CityYelpLast.gif'> |
   ---|---|---
   latest|latest|latest
@@ -47,13 +48,15 @@ Purpose of the this portfolio building will include my React Native Projects
 - open a terminal at the same folder in.mov file.
 - if not installed this do these first
 
+### Using Terminal
+
 ```bash
 brew install ffmpeg 
 brew cask install xquartz #dependency for gifsicle, only required for mountain-lion and above
 open /usr/local/Cellar/x-quartz/2.7.4/XQuartz.pkg # runs the XQuartz installer (YOU NEED TO UPDATE THE PATH)
 brew install gifsicle
 ```
-Then
+### Then
 
 ```shell
 - paste this command line to your terminal 
