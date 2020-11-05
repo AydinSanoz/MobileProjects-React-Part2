@@ -41,7 +41,6 @@ Purpose of the this portfolio building will include my React Native Projects
   CityYelp|---|---
   <img src = './src(cityYelp)/Assets/CityYelpLast.gif'> |<img src = './src(cityYelp)/Assets/CityYelpLast.gif'> |<img src = './src(cityYelp)/Assets/CityYelpLast.gif'>
   latest|latest|latest
-  ---|---|---
 
 ### The easiest way to convert your screenrecording to gif.
 
