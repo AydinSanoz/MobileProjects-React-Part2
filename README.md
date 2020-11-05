@@ -36,6 +36,7 @@ Purpose of the this portfolio building will include my React Native Projects
 
 ##  React-Native Projects
   Project 0012|Project 0013|Project 0014
+  ---|---|---|
   CityYelp|---|---
   ---|---|---
   <img src = './src(cityYelp)/Assets/CityYelpLast.gif'> |<img src = './src(cityYelp)/Assets/CityYelpLast.gif'> |<img src = './src(cityYelp)/Assets/CityYelpLast.gif'> |
