@@ -39,7 +39,7 @@ Purpose of the this portfolio building will include my React Native Projects
   Project 0012|Project 0013|Project 0014
   ---|---|---
   CityYelp|---|---
-  <img src = './src(cityYelp)/Assets/CityYelpLast.gif'> |<img src = './src(cityYelp)/Assets/CityYelpLast.gif'> |<img src = './src(cityYelp)/Assets/CityYelpLast.gif'>
+  <img src = './src(cityYelp)/Assets/CityYelpLast.gif'> |<img src = './secreenShots/famousOnes.gif'> |<img src = './src(cityYelp)/Assets/CityYelpLast.gif'>
   RNP2-1|RNP2-2|RNP2-3
   :)|:(|;)
 
